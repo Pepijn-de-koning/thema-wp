@@ -1,20 +1,32 @@
 <?php get_header(); ?>
 
-    <?php
+<div class="container">
+  <main class="col-md-8">
+      <?php
       if( have_posts() ) :
         while( have_posts() ) : the_post();?>
-          <h3><?php the_title(); ?></h3>
-          <div><?php the_excerpt(); ?></div>
+        <h3><?php the_title(); ?></h3>
+        <div><?php the_excerpt(); ?></div>
 
 
 
-    <?php
+        <?php
       endwhile;
-      else: ?>
-      <p>Geen bericht gevonden</p>
+    else: ?>
+    <p>Geen bericht gevonden</p>
 
     <?php
-      endif
-     ?>
+    endif
+    ?>
+  </main>
+</div>
 
-     <?php get_footer(); ?>
+<div class="container">
+  <aside class="col-md-4 bg-light">
+    <h3>
+      Terzijde
+    </h3>
+  </aside>
+</div>
+
+    <?php get_footer(); ?>

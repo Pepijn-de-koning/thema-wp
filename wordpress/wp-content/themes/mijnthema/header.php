@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,11 @@
       </nav>
 
 
-      <div class="jumbotron">
-        <h1 class="display-4"><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
-        <p class="lead"><?php bloginfo('description') ?></p>
+      <div class="jumbotron" style="background-image: url(<?php echo get_template_directory_uri() . '/img/banner.jpg' ?>)">
+        <div class="container">
+          <h1 class="display-4"><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
+          <p class="lead"><?php bloginfo('description') ?></p>
+        </div>
       </div>
 
     </header>

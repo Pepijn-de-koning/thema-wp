@@ -27,4 +27,35 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
- ?>
+//widgets
+
+function registreer_widgets() {
+  register_sidebar(
+    array(
+      'id' => 'aside',
+      'name' => __( 'Widget aside'),
+      'description' => __( 'Widget voor side element' ),
+      'before_widget' => '<div class="widget-aside">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-titel">',
+      'after_title' => '</h3>',
+
+    )
+  );
+  register_sidebar(
+    array(
+      'id' => 'onder',
+      'name' => __( 'Widget footer'),
+      'description' => __( 'Widget voor de footer' ),
+      'before_widget' => '<div class="widget-footer">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-footer">',
+      'after_title' => '</h3>',
+
+    )
+  );
+}
+add_action( 'init', 'registreer_widgets' )
+
+
+?>

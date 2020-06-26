@@ -6,7 +6,7 @@
           <h3><?php the_post(); ?></h3>
           <div><?php the_excerpt(); ?></div>
 
-          <p>een bericht gevonden</p>
+
 
     <?php
       endwhile;
